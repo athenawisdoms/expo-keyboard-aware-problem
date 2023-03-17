@@ -1,15 +1,16 @@
-# Expo Router Example
+# To Reproduce Problem:
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+    npx expo start
 
-## 🚀 How to use
+then run it on your iOS device
 
-```sh
-npx create-react-native-app -t with-router
-```
+# Problem 1
 
-## 📝 Notes
+Clicking on the input element at the bottom of the screen causes the virtual keyboard to slide up as expected, but the input is now hidden by the virtual keyboard.
 
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
+<img src="image1.png" width="300" />
+<img src="image2.png" width="300" />
+
+# Problem 2
+
+As new messages get added to the screen, the `KeyboardAwareScrollView` does not auto scoll to the reveal the latest message.
